@@ -100,12 +100,21 @@ smart agriculture system/
 
 👥 Team Members
 24BCE11168 - Prakhar Gupta
+
 24BCE10669 - Bhini Dua
+
 24BCE11467 - Akhand Pratap Singh
+
 24BCE11110 - Anupriya
+
 24BCE10842 - Tanisha Manshani
+
 24BCE10177 - Kandi Manvith Reddy
+
 24BCE10430 - Shivendra Singh
+
 24BCE11283 - Ayush Pratap Singh
+
 24BCE10618 - Simone Gupta
+
 23BAI11179 - Shresth Singh Kashyap
