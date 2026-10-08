@@ -1,103 +1,53 @@
-# SmartAgri - Smart Agriculture System 🌾🤖
+# SmartAgri 🌾
+> **Transforming Traditional Farming Through Data-Driven Technology & API Integration**[cite: 1]
 
-SmartAgri is an AI-powered smart agriculture portal built with Express.js, EJS, Python Machine Learning, PyTorch, and real-time open Mandi market APIs. It provides crop recommendation, plant disease diagnosis, and financial profit analysis for modern precision farming.
+SmartAgri is a software-based solution that uses weather APIs and agricultural datasets to recommend suitable crops and estimate production and profit[cite: 1]. By replacing manual decision-making with machine learning insights, it empowers farmers to make data-driven decisions that boost productivity and ensure sustainable food production[cite: 1].
 
----
+## ⚠️ The Problem
+Traditional agriculture relies heavily on manual planning and intuition, leading to critical inefficiencies[cite: 1]:
+* **Crop Selection Difficulties:** Farmers struggle to choose the most suitable crops without data-driven insights on soil and climate[cite: 1].
+* **Climate Data Underutilization:** Real-time weather data and predictive analytics remain largely untapped[cite: 1].
+* **Soil Analysis Gap:** Nitrogen, phosphorus, and potassium (NPK) levels are rarely analyzed digitally, leading to imbalanced fertilization[cite: 1].
+* **No Yield Prediction:** The absence of accurate forecasting makes it difficult for farmers to plan finances or secure contracts[cite: 1].
 
-## 🌟 Key Features
+## 💡 System Workflow
+The system processes data through a streamlined architecture[cite: 1]:
+1. **Accept User Inputs:** Captures location coordinates and land area in acres[cite: 1].
+2. **Fetch Weather Data:** Retrieves real-time temperature, humidity, and rainfall data via APIs[cite: 1].
+3. **Analyze Datasets:** Processes NPK values, soil type, and historical crop performance[cite: 1].
+4. **Generate Recommendations:** AI algorithms rank and recommend the most suitable crops[cite: 1].
+5. **Estimate Profit:** Calculates expected yield, market value, and profit projections[cite: 1].
 
-1. **🌱 Crop Profit Analyzer**: Calculates estimated investment, expected yield, and net profit based on land acreage, crop variety, district, and **live daily Mandi market prices** fetched directly from Agmarknet (`data.gov.in`).
-2. **🧠 AI Crop Recommendation**: Analyzes soil nutrients ($N, P, K$), temperature, humidity, rainfall, and soil $pH$ using a trained Random Forest model to recommend top suitable crops.
-3. **🔬 Plant Doctor (Disease Detection)**: AI-based leaf image diagnostic using PyTorch & MobileNetV3 model trained on plant disease classes.
-4. **🔐 Authentication & Dashboard**: Farmer login & sign-up portal integrated with **XAMPP MySQL**.
+## ✨ Key Features
+* **Growth Timeline:** Estimates the complete duration from sowing to harvest[cite: 1].
+* **Smart Irrigation:** Calculates precise watering needs, achieving 20-70% water savings compared to traditional methods[cite: 1].
+* **Fertilizer Guidance:** Suggests optimal fertilizers based on soil nutrient deficiencies to prevent over-fertilization[cite: 1].
+* **Pest & Disease Advisory:** Acts as an early warning system and provides pesticide recommendations[cite: 1].
+* **Harvest Prediction:** Predicts harvesting periods using machine learning models with 94-99% accuracy[cite: 1].
 
----
+## 🛠️ Technology Stack
+* **Frontend:** HTML, CSS, JavaScript[cite: 1]
+* **Backend:** Node.js, Express.js[cite: 1]
+* **APIs:** Live Weather API Integration[cite: 1]
+* **Machine Learning & Data Processing:** Python, pandas, NumPy, scikit-learn, matplotlib[cite: 1]
 
-## 🗄️ XAMPP MySQL Setup & Data Storage
+## 📅 Implementation Timeline
+Developed over a 6-week roadmap[cite: 1]:
+* **Week 1:** Planning, research, and requirements gathering[cite: 1].
+* **Week 2:** Frontend UI/UX development[cite: 1].
+* **Week 3:** Backend server and database configuration[cite: 1].
+* **Week 4:** API integration and ML algorithm implementation[cite: 1].
+* **Week 5:** System testing and performance optimization[cite: 1].
+* **Week 6:** Technical documentation and deployment[cite: 1].
 
-All user registration and authentication data is stored in your local XAMPP MySQL database.
-
-### How to Start XAMPP MySQL:
-1. Open **XAMPP Control Panel**.
-2. Click **Start** next to **MySQL** (and Apache if needed).
-3. Start the application (`npm start`). The app automatically connects to MySQL, creates the database `smartagri_db`, and creates the `users` table automatically!
-
-### Where User Data is Stored:
-- **Database**: `smartagri_db`
-- **Table**: `users`
-- **Fields**: `id`, `full_name`, `email_or_mobile`, `gender`, `password`, `created_at`
-
-### How to View Stored Data in phpMyAdmin:
-1. Open your browser and go to: `http://localhost/phpmyadmin`
-2. Click on **`smartagri_db`** on the left sidebar.
-3. Click on the **`users`** table to view registered users and credentials in real-time.
-
-*(Optional)* You can also manually inspect or run the provided [schema.sql](file:///c:/Users/kumar/OneDrive/Desktop/smart%20agriculture%20system/schema.sql) in phpMyAdmin SQL tab.
-
----
-
-## 🚀 Quick Start Guide
-
-### 1. Prerequisites
-- Node.js (v16+)
-- Python 3.8+
-- XAMPP (for MySQL Database)
-
-### 2. Installation
-
-Clone the repository:
-```bash
-git clone https://github.com/Prashantk2628/SmartAgri-Smart-Agriculture-System.git
-cd SmartAgri-Smart-Agriculture-System
-```
-
-Install Node.js dependencies:
-```bash
-npm install
-```
-
-Install Python dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Running the System
-
-Start XAMPP MySQL server, then run:
-```bash
-npm start
-```
-Open your browser and visit: `http://localhost:3000`
-
----
-
-## 📁 Repository Structure
-
-```
-smart agriculture system/
-├── app.js                   # Main Express application entry point
-├── schema.sql               # MySQL database schema file for XAMPP
-├── package.json             # Node dependencies and scripts
-├── requirements.txt         # Python dependencies
-├── cleaned_crop_production_investment.csv # Crop investment dataset
-├── data/
-│   └── merged_crop_dataset.csv             # Crop recommendation dataset
-├── routes/
-│   └── auth.js              # Authentication routes & XAMPP MySQL setup
-├── services/
-│   ├── profit_analyzer.py   # Mandi API & Profit analysis engine
-│   ├── model.py             # Random Forest Crop Recommendation engine
-│   ├── disease_detector.py  # PyTorch Plant Disease detector engine
-│   ├── random_forest_pipeline.pkl # Trained Random Forest model
-│   ├── label_encoder.pkl    # Label encoder mapping
-│   ├── plant_model.pth      # PyTorch MobileNetV3 weights
-│   └── classes.txt          # Disease class labels
-├── public/                  # Static assets (CSS, JS, Uploads)
-└── views/                   # EJS templates (Profit Analyzer, Recommendation, Detection, etc.)
-```
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License.
+## 👥 Team Members
+* 24BCE11168 - Prakhar Gupta
+* 24BCE10669 - Bhini Dua
+* 24BCE11467 - Akhand Pratap Singh
+* 24BCE11110 - Anupriya
+* 24BCE10842 - Tanisha Manshani
+* 24BCE10177 - Kandi Manvith Reddy
+* 24BCE10430 - Shivendra Singh
+* 24BCE11283 - Ayush Pratap Singh
+* 24BCE10618 - Simone Gupta
+* 23BAI11179 - Shresth Singh Kashyap
