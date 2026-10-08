@@ -100,6 +100,8 @@ smart agriculture system/
 
 👥 Team Members
 
+24BCE11128 - Prashant Kumar
+
 24BCE11168 - Prakhar Gupta
 
 24BCE10669 - Bhini Dua
