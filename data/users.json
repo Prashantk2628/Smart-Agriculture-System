@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1789018828527,
+    "full_name": "rakul",
+    "email_or_mobile": "9807465378",
+    "gender": "male",
+    "password": "12345",
+    "created_at": "2026-09-10T05:40:28.527Z"
+  },
+  {
+    "id": 1791445774401,
+    "full_name": "prakhar gupta",
+    "email_or_mobile": "prakharg235@gmail.com",
+    "gender": "male",
+    "password": "1234",
+    "created_at": "2026-10-08T07:49:34.401Z"
+  }
+]

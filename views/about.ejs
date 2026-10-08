@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>SmartAgri | About Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="/dashboard_style.css"> 
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors:{
+            "primary": "#1F7D53",
+            "primary-dark": "#165c3d",
+            "surface-dark": "#18230F",
+            "surface-nav": "#27391C",
+            "surface-card": "#255F38",
+            "text-main": "#f8f7f6",
+            "text-muted": "#c1dcb0",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "body": ["Space Grotesk", "sans-serif"],
+          }
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-surface-dark min-h-screen flex flex-col font-display antialiased selection:bg-primary selection:text-white">
+  
+  <header id="main-nav" class="sticky top-0 z-50 w-full bg-surface-nav border-b border-white/10 shadow-lg">
+    <div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <div class="flex items-center gap-3 group cursor-pointer" onclick="window.location='/dashboard'">
+        <div class="high-profile-logo w-12 h-12 flex items-center justify-center relative">
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="agroGradient" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#4CAF50"/>
+                <stop offset="100%" stop-color="#1B5E20"/>
+              </linearGradient>
+            </defs>
+            <path d="M12 22L17.2 19V13L12 10L6.8 13V19L12 22Z" fill="#E8F5E9" fill-opacity="0.2" stroke="#2D5A27" stroke-width="0.5"/>
+            <path d="M12 14C12 14 7 12 5 7C5 3 9 2 12 7V14Z" fill="url(#agroGradient)" />
+            <path d="M12 14C12 14 17 12 19 7C19 3 15 2 12 7V14Z" fill="#81C784" />
+            <path d="M12 21V10" stroke="#1B5E20" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="flex flex-col leading-tight hidden sm:block">
+          <h1 class="text-xl font-bold tracking-tight text-white">Smart<span class="text-primary font-black">Agri</span></h1>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-primary/80 font-bold">Systems AI</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/dashboard?name=<%= userName %>" class="text-text-muted hover:text-primary transition-colors duration-200 font-medium">Home</a>
+        <!-- <a href="/about?name=<%= userName %>" class="text-primary font-medium">About Us</a> -->
+      </nav>
+      
+      <div class="flex items-center gap-4">
+        <div class="relative group">
+          <button class="profile-btn flex items-center gap-3 px-3 py-2 rounded-xl hover:bg-white/5 transition-all">
+    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold ring-2 ring-white/20 group-hover:ring-primary transition-all overflow-hidden">
+      <% if (typeof userName !== 'undefined' && userName) { %>
+        <span class="text-lg uppercase"><%= userName.charAt(0) %></span>
+      <% } else { %>
+        <span class="material-symbols-outlined">person</span>
+      <% } %>
+    </div>
+    <span class="text-sm font-medium text-white hidden lg:block"><%= typeof userName !== 'undefined' ? userName : 'Guest' %></span>
+    <span class="material-symbols-outlined text-sm text-white/70">expand_more</span>
+  </button>
+          <div class="absolute right-0 mt-2 w-48 bg-surface-nav border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <a href="/auth/logout" class="flex items-center gap-3 px-4 py-3 text-sm text-text-muted hover:text-white hover:bg-white/5 transition-colors">
+              <span class="material-symbols-outlined text-sm">logout</span> Logout
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow flex flex-col w-full max-w-[1440px] mx-auto px-6 py-12 gap-12">
+    <div class="text-center max-w-3xl mx-auto flex flex-col gap-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Meet the <span class="text-primary">Team</span></h2>
+      <p class="text-lg text-text-muted font-light leading-relaxed">
+        Our multidisciplinary team combines software engineering, AI research, and data analysis to build the future of sustainable farming.
+      </p>
+    </div>
+
+    <section class="grid grid-cols-1 md:grid-cols-6 gap-8">
+      
+      <div class="md:col-span-2 bg-surface-nav rounded-2xl border border-white/10 p-8 flex flex-col items-center text-center gap-4 hover:-translate-y-2 transition-transform duration-300 shadow-lg">
+        <div class="w-24 h-24 rounded-full border-4 border-surface-dark overflow-hidden mb-2 shadow-[0_0_15px_rgba(31,125,83,0.3)]">
+        </div>
+        <div>
+        </div>
+        <p class="text-text-muted text-sm mt-2 leading-relaxed">
+          Spearheaded the backend architecture and database schema design, implementing secure authentication and core system logic.
+        </p>
+      </div>
+
+
+    </section>
+  </main>
+
+  <footer class="mt-auto border-t border-white/10 bg-surface-nav/50">
+    <div class="max-w-[1440px] mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-white/20">grass</span>
+        <p class="text-text-muted text-sm">© 2026 SmartAgri. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
