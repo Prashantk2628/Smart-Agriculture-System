@@ -104,6 +104,8 @@ smart agriculture system/
 
 24BCE11168 - Prakhar Gupta
 
+24BCE10618 - Simone Gupta
+
 24BCE10669 - Bhini Dua
 
 24BCE11467 - Akhand Pratap Singh
@@ -117,7 +119,5 @@ smart agriculture system/
 24BCE10430 - Shivendra Singh
 
 24BCE11283 - Ayush Pratap Singh
-
-24BCE10618 - Simone Gupta
 
 23BAI11179 - Shresth Singh Kashyap
